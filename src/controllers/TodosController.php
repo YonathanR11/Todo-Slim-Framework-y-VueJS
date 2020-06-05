@@ -7,7 +7,7 @@ class TodosController
     // * Mostrar todos los registros con valor del 'status' y idUsuario
     public static function getAllByStatusAndUsuario(int $status, int $todo)
     {
-        $todo = TodosModel::all()->where('status', $status)->where('idtodos', $todo);
+        $todo = TodosModel::all()->where('status', $status)->where('idUser', $todo);
         return $todo;
     }
 

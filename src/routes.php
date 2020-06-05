@@ -55,7 +55,7 @@ return function (App $app) {
             return $response;
         });
         // ? Eliminar un registro de forma logica
-        $app->delete('/user', function (Request $request, Response $response) {
+        $app->delete('/todo', function (Request $request, Response $response) {
             $res = TodosController::deleteTodo($request->getParsedBody());
             $response = $response->withHeader("Content-Type", "application/json")
                 ->withStatus(200)
