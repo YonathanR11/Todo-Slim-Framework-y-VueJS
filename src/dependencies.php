@@ -33,4 +33,10 @@ return function (App $app) {
         $pdo->exec("set names utf8");
         return $pdo;
     };
+
+    // Configuracion para Eloquent ORM
+    $capsule = new \Illuminate\Database\Capsule\Manager;
+    $capsule->addConnection($container['settings']['db']);
+    $capsule->setAsGlobal();
+    $capsule->bootEloquent();
 };
