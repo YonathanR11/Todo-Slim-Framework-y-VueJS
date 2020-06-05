@@ -19,4 +19,18 @@ return function (App $app) {
         $logger->pushHandler(new \Monolog\Handler\StreamHandler($settings['path'], $settings['level']));
         return $logger;
     };
+
+    // PDO database library 
+    $container['db'] = function ($c) {
+        $settings = $c->get('settings')['db'];
+        $pdo = new PDO(
+            "mysql:host=" . $settings['host'] . ";dbname=" . $settings['database'],
+            $settings['username'],
+            $settings['password']
+        );
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+        $pdo->exec("set names utf8");
+        return $pdo;
+    };
 };

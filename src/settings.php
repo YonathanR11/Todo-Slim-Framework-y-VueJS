@@ -15,5 +15,20 @@ return [
             'path' => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../logs/app.log',
             'level' => \Monolog\Logger::DEBUG,
         ],
+        // database connection details         
+        'db' => [
+            'driver' => 'mysql',
+            'host' => 'localhost',
+            'port' => '3306',
+            'database' => 'api',
+            'username' => 'root',
+            'password' => '',
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci'
+        ],
+        // jwt settings
+        'jwt' => [
+            'secret' => '7nLWwFw3iiVx0POIXoc4JMRYrI9djDvMlcfgvmZsahPZLFioKztXS'
+        ]
     ],
 ];
