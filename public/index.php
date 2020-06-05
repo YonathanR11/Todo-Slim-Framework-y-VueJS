@@ -29,5 +29,8 @@ $middleware($app);
 $routes = require __DIR__ . '/../src/routes.php';
 $routes($app);
 
+// Register Controllers y Models
+require __DIR__ . '/../src/requires.php';
+
 // Run app
 $app->run();
