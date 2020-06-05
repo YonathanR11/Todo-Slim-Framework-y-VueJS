@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+</head>
+
+<body>
+  <h2>App de TODO</h2>
+
+  <script>
+    (async () => {
+      const headers = new Headers();
+      headers.append('X-API-KEY', 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXN1YXJpbyI6InlvbmF0aGFuIn0.-iwTcAl5diB1euhIsUi7Vn-cKWf_Zg8YGgusFsrdAUw');
+
+      const init = {
+        method: 'GET',
+        headers
+      };
+
+      let urlPath = ""
+      if (location.host.includes('localhost') || location.host.includes('192.168')) {
+        urlPath = '/todo';
+      }
+
+      const response = await fetch(urlPath + '/api/index.php/api/todo/1/1', init);
+      console.log(`response status is ${response.status}`);
+      const mediaType = response.headers.get('content-type');
+      let data;
+      if (mediaType.includes('json')) {
+        data = await response.json();
+      } else {
+        data = await response.text();
+      }
+      console.log(data);
+    })();
+  </script>
+</body>
+
+</html>

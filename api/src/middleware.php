@@ -5,7 +5,7 @@ use Slim\App;
 return function (App $app) {
 
     $app->add(new \Tuupola\Middleware\JwtAuthentication([
-        "path" => "/api", /* or ["/api", "/admin"] */
+        "path" => "/api2", /* or ["/api", "/admin"] */
         "header" => "X-API-KEY",
         "attribute" => "token_data",
         "secret" => "tvWCFkfwzPWy7iBCHQEvBZCZ7Q6Z1gNpHdmH17r8wN3SXccESWtd7PeWKZIUl2i6HNV0tq8087zxBq",
