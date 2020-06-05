@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8f86e12138f3408a43dd28f09466d7e3",
+    "content-hash": "c30b69f412e73b3517664b6999d0dc16",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1947,6 +1947,47 @@
                 "psr-7"
             ],
             "time": "2019-07-01T08:28:35+00:00"
+        },
+        {
+            "name": "visavi/cleanup",
+            "version": "v1.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/visavi/cleanup.git",
+                "reference": "fc13c6376fabe61522d4a3cfeab90e8555c1fbd2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/visavi/cleanup/zipball/fc13c6376fabe61522d4a3cfeab90e8555c1fbd2",
+                "reference": "fc13c6376fabe61522d4a3cfeab90e8555c1fbd2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "bin": [
+                "cleanup"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Grigorev",
+                    "email": "admin@visavi.net",
+                    "homepage": "http://visavi.net"
+                }
+            ],
+            "description": "Cleaning vendor directory",
+            "homepage": "http://visavi.net",
+            "keywords": [
+                "clean",
+                "composer",
+                "vendor"
+            ],
+            "time": "2019-12-08T16:59:14+00:00"
         },
         {
             "name": "voku/portable-ascii",
