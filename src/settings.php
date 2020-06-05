@@ -20,7 +20,7 @@ return [
             'driver' => 'mysql',
             'host' => 'localhost',
             'port' => '3306',
-            'database' => 'api',
+            'database' => 'todo',
             'username' => 'root',
             'password' => '',
             'charset'   => 'utf8',
