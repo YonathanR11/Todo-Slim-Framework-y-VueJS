@@ -8,7 +8,7 @@ return function (App $app) {
         "path" => "/api", /* or ["/api", "/admin"] */
         "header" => "X-API-KEY",
         "attribute" => "token_data",
-        "secret" => "b863b3e53ce9b3d3c12d6bbbe5c7ee27dba833386ca055b5ec177c1a685c8cf5",
+        "secret" => "tvWCFkfwzPWy7iBCHQEvBZCZ7Q6Z1gNpHdmH17r8wN3SXccESWtd7PeWKZIUl2i6HNV0tq8087zxBq",
         "algorithm" => ["HS256"],
         "error" => function ($response, $arguments) {
             $data["status"] = "error";

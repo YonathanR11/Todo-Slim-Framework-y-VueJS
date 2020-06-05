@@ -28,7 +28,7 @@ return [
         ],
         // jwt settings
         'jwt' => [
-            'secret' => '7nLWwFw3iiVx0POIXoc4JMRYrI9djDvMlcfgvmZsahPZLFioKztXS'
+            'secret' => 'tvWCFkfwzPWy7iBCHQEvBZCZ7Q6Z1gNpHdmH17r8wN3SXccESWtd7PeWKZIUl2i6HNV0tq8087zxBq'
         ]
     ],
 ];
