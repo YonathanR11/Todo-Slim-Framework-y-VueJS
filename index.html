@@ -10,6 +10,8 @@
 <body>
   <h2>App de TODO</h2>
 
+  <div id="todos" class=""></div>
+
   <script>
     (async () => {
       const headers = new Headers();
@@ -31,6 +33,16 @@
       let data;
       if (mediaType.includes('json')) {
         data = await response.json();
+        data.forEach(element => {
+          // var text = document.createTextNode(element.texto);
+          // document.getElementById('todos').appendChild(text);
+
+          var newt = document.createElement("div");
+          newt.style.cssText = 'border:2px solid #56aaf3;padding:12px;margin:12px 0 12px 0;';
+          var t = document.createTextNode(element.texto);
+          newt.appendChild(t);
+          document.getElementById("todos").appendChild(newt);
+        });
       } else {
         data = await response.text();
       }
